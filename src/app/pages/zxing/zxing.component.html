@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ZXING</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <zxing-scanner
+    #zxing
+    [autofocusEnabled]="true"
+    [formats]="allowedFormats"
+    [delayBetweenScanSuccess]="3000"
+  ></zxing-scanner>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col size="12">
+      <ion-button
+        expand="block"
+        shape="round"
+        [routerLink]="['../']"
+        routerDirection="back"
+      >
+        Go Back
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

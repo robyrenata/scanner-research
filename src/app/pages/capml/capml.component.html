@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CAPML</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div #square class="square"></div>
+  <div class="zoom-ratio-wrapper">
+    <ion-range
+      [min]="minZoomRatio"
+      [max]="maxZoomRatio"
+      [disabled]="minZoomRatio === undefined || maxZoomRatio === undefined"
+      (ionChange)="setZoomRatio($any($event))"
+    ></ion-range>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col size="12">
+      <ion-button
+        expand="block"
+        shape="round"
+        [routerLink]="['../']"
+        routerDirection="back"
+      >
+        Go Back
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "scanner-research",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
